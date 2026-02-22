@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angebote</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+            <div class="mobile-nav">
+                <span class="hamburger">&#9776;</span>
+                <span class="active-page">Home</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="offers.html" class="active">Angebote</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main class="offers-section">
+            <p class="offers-intro">
+                Hier finden Sie eine Übersicht unserer beliebtesten Dienstleistungen und Preise.
+            </p>
+
+            <div class="offers-table-container">
+                <table class="offers-table">
+                    <thead>
+                        <tr>
+                            <th>Leistung</th>
+                            <th>Dauer</th>
+                            <th>Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Waschen, Schneiden & Föhnen</td>
+                            <td>45 Min</td>
+                            <td>CHF 65.–</td>
+                        </tr>
+                        <tr>
+                            <td>Herrenhaarschnitt</td>
+                            <td>30 Min</td>
+                            <td>CHF 45.–</td>
+                        </tr>
+                        <tr>
+                            <td>Balayage / Farbe</td>
+                            <td>ab 90 Min</td>
+                            <td>ab CHF 160.–</td>
+                        </tr>
+                        <tr>
+                            <td>Föhnen & Styling</td>
+                            <td>30 Min</td>
+                            <td>CHF 40.–</td>
+                        </tr>
+                        <tr>
+                            <td>Kinderhaarschnitt</td>
+                            <td>20 Min</td>
+                            <td>CHF 30.–</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="offers-note">
+                *Alle Preise verstehen sich inklusive Beratung und Styling-Produkten.
+            </p>
+        </main>
+
+        <footer>
+            <a href="impressum.html" class="footer-link">Impressum</a>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        const activePage = document.querySelector('.active-page');
+
+        const activeLink = document.querySelector('nav ul li a.active');
+        if(activeLink) {
+            activePage.textContent = activeLink.textContent;
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

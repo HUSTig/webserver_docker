@@ -1,0 +1,7 @@
+version: "3"
+services:
+  webserver:
+    image: git-registry.gibb.ch/shu151669/modul347/webserver:v1
+    ports:
+      - "80:80"
+    restart: unless-stopped

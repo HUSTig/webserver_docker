@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+            <div class="mobile-nav">
+                <span class="hamburger">&#9776;</span>
+                <span class="active-page">Impressum</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="offers.html">Angebote</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main class="impressum-section">
+            <div class="impressum-content">
+                <p><strong>Angaben</strong></p>
+                <p>
+                    Stefan Huber<br>
+                    Blümlisalpstrasse 82<br>
+                    3627 Heimberg<br>
+                    Schweiz
+                </p>
+
+                <p><strong>Kontakt</strong></p>
+                <p>
+                    Telefon: +41 77 421 15 88<br>
+                    E-Mail: <a class="impressum-link" href="mailto:info@beispiel.ch">stefan.huber0907@gmail.com</a>
+                </p>
+
+                <p><strong>Vertreten durch</strong></p>
+                <p>Stefan Huber</p>
+
+                <p><strong>Haftungsausschluss</strong></p>
+                <p>
+                    Der Betreiber dieser Website übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit
+                    und Aktualität der bereitgestellten Inhalte. Haftungsansprüche gegen den Betreiber wegen
+                    Schäden materieller oder immaterieller Art sind ausgeschlossen.
+                </p>
+
+                <p><strong>Urheberrecht</strong></p>
+                <p>
+                    Alle Inhalte dieser Website, insbesondere Texte, Bilder und Grafiken, unterliegen dem
+                    Urheberrecht. Eine Vervielfältigung oder Verwendung ist ohne ausdrückliche Zustimmung
+                    des Betreibers nicht gestattet.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        const activePage = document.querySelector('.active-page');
+
+        const activeLink = document.querySelector('nav ul li a.active');
+        if(activeLink) {
+            activePage.textContent = activeLink.textContent;
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

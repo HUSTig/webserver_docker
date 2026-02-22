@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+            <div class="mobile-nav">
+                <span class="hamburger">&#9776;</span>
+                <span class="active-page">Home</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="gallery.html" class="active">Galerie</a></li>
+                <li><a href="offers.html">Angebote</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main class="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-column">
+                    <img src="images/gallery/picture1.jpeg" alt="Gallery Picture">
+                    <img src="images/gallery/picture2.webp" alt="Gallery Picture">
+                    <img src="images/gallery/picture7.jpeg" alt="Gallery Picture">
+                    <img src="images/gallery/picture8.webp" alt="Gallery Picture">
+                </div>
+                <div class="gallery-column">
+                    <img src="images/gallery/picture3.jpg" alt="Gallery Picture">
+                    <img src="images/gallery/picture4.jpg" alt="Gallery Picture">
+                    <img src="images/gallery/picture9.webp" alt="Gallery Picture">
+                    <img src="images/gallery/picture12.jpg" alt="Gallery Picture">
+                </div>
+                <div class="gallery-column">
+                    <img src="images/gallery/picture5.jpg" alt="Gallery Picture">
+                    <img src="images/gallery/picture6.jpg" alt="Gallery Picture">
+                    <img src="images/gallery/picture11.webp" alt="Gallery Picture">
+                    <img src="images/gallery/picture10.jpg" alt="Gallery Picture">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="impressum.html" class="footer-link">Impressum</a>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        const activePage = document.querySelector('.active-page');
+
+        const activeLink = document.querySelector('nav ul li a.active');
+        if(activeLink) {
+            activePage.textContent = activeLink.textContent;
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

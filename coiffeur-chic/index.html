@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coiffeur Chic</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+            <div class="mobile-nav">
+                <span class="hamburger">&#9776;</span>
+                <span class="active-page">Home</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="offers.html">Angebote</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="landing-image-container">
+                <img class="landing-image" src="images/coiffeur_salon.jpg" alt="Bild Salon">
+            </div>
+
+            <section class="landing-texts">
+                <div>
+                    <h1>"Lorem ipsum dolor sit amet"</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                        sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+            </section>
+
+            <section class="hair-styles">
+                <div>
+                    <img src="images/blond.jpg" alt="Blond Hair">
+                    <img src="images/wedding.jpg" alt="Wedding Hair">
+                    <img src="images/straight.jpg" alt="Straight Hair">
+                </div>
+            </section>
+
+            <footer>
+                <a href="impressum.html" class="footer-link">Impressum</a>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        const activePage = document.querySelector('.active-page');
+
+        const activeLink = document.querySelector('nav ul li a.active');
+        if(activeLink) {
+            activePage.textContent = activeLink.textContent;
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

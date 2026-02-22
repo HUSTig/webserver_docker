@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+            <div class="mobile-nav">
+                <span class="hamburger">&#9776;</span>
+                <span class="active-page">Home</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="offers.html">Angebote</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main class="contact-section">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-input" type="text" name="name" placeholder="Ihr Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">E-Mail</label>
+                    <input class="form-input" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Nachricht</label>
+                    <textarea class="form-textarea" name="message" placeholder="Ihre Nachricht..." rows="6" required></textarea>
+                </div>
+
+                <button class="form-button" type="submit">Senden</button>
+            </form>
+        </main>
+
+        <footer>
+            <a href="impressum.html" class="footer-link">Impressum</a>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // verhindert den echten Submit
+            alert('Danke für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.');
+            this.reset(); // leert das Formular nach dem Senden
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        const activePage = document.querySelector('.active-page');
+
+        const activeLink = document.querySelector('nav ul li a.active');
+        if(activeLink) {
+            activePage.textContent = activeLink.textContent;
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
